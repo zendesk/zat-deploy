@@ -5,5 +5,3 @@ description: 'Create or Update an existing app in a Zendesk instance. Requires a
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  with:
-    token: ${{ secrets.GITHUB_TOKEN }}
