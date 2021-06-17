@@ -1,0 +1,7 @@
+# action.yml
+name: 'Zendesk App Tools - Deploy Apps'
+author: 'Zendesk - Ashwin'
+description: 'Create or Update an existing app in a Zendesk instance. Requires a .zat file.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
