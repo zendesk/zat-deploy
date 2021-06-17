@@ -1,6 +1,8 @@
-<h2 align="center">
-  ⚡️ZAT - Deploy Github Action
-</h2>
+<h1 align="center">
+  ⚡️ZAT Deploy - Github Action
+  <br />
+  <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg">
+</h1>
 
 <br />
 
@@ -32,7 +34,7 @@ If you want to update an existing app, add an app_id key with the ID of the curr
 
 ## 🛠 Usage
 
-Below is an example flow to Deploy the app to Z3 instance.
+Below is an example flow to deploy the app to Z3 instance.
 
 ```
 name: Deploy Zendesk App
