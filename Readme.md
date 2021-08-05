@@ -14,9 +14,9 @@ This Action creates or updates an existing app in your Zendesk instance after a 
 
 ## 💫 Flow
 
-It requires a .zat file in the root of your repository or as a repo-secret.
+It requires a ZAT configs as a repo-secret. 
+(You can paste the entire object as ZAT secret)
 
-If you want to update an existing app, add an app_id key with the ID of the currently installed app, in ZAT secret.
 
 ```JSON
 // Sample `.zat` file
