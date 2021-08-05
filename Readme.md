@@ -16,7 +16,7 @@ This Action creates or updates an existing app in your Zendesk instance after a 
 
 It requires a .zat file in the root of your repository.
 
-If you want to update an existing app, add an app_id key with the ID of the currently installed app.
+If you want to update an existing app, add an app_id key with the ID of the currently installed app, in ZAT secret.
 
 ```JSON
 // Sample `.zat` file
@@ -41,16 +41,23 @@ name: Deploy Zendesk App
 
 on:
   push:
-    branches: [ master ]
+    branches: [develop]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: zendesk/checkout@v2
+      - uses: zendesk/checkout@v2
 
-    - name: ZAT Deploy
-      uses: zendesk/zat-deploy@master
+      - name: Add ZAT Config
+        run: |
+          echo $ZAT >> .zat
+        env:
+          ZAT: ${{ secrets.ZAT }}
+
+      - name: ZAT Deploy
+        uses: zendesk/zat-deploy@master
+
 
 ```
