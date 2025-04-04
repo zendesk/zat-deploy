@@ -10,8 +10,6 @@ cd "$APP_PATH" || {
   exit 1
 }
 
-ls -la
-
 FILE=.zat
 PASSWORD="\"password\""
 APP_ID="\"app_id\""
